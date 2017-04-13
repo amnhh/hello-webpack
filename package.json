@@ -23,5 +23,8 @@
   "homepage": "https://github.com/amnhh/hello-webpack#readme",
   "devDependencies": {
     "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
