@@ -7,12 +7,18 @@
 var path = require('path');
 
 module.exports = {
-  entry : [
-    './../js/main1.js',
-    './../js/main2.js'
-  ],
+  entry : './../js/main.jsx',
   output : {
-    filename : 'boudle_sourcemap.js',
-    path : path.resolve(__dirname, './../dist/')
+    filename : 'boudle.js',
+    path : path.resolve(__dirname, './../dist')
+  },
+  module: {
+    loaders:[
+      {
+        test: /\.js[x]?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader?presets[]=es2015&presets[]=react',
+      },
+    ]
   }
 };
