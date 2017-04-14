@@ -5,10 +5,14 @@
  */
 
 var path = require('path');
+
 module.exports = {
-  entry : './../js/main.js',
+  entry : [
+    './../js/main1.js',
+    './../js/main2.js'
+  ],
   output : {
-    filename : 'boudle.js',
+    filename : 'boudle_sourcemap.js',
     path : path.resolve(__dirname, './../dist/')
   }
 };
